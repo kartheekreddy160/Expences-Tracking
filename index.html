@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Expense Tracker
+    </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1><span style="color: red;">Expense</span> Tracker</h1>
+    </header>
+    <!-- form to add a new Expense -->
+    
+    <div class="expense-form">
+        <input type="text"  id="expense-title" placeholder="Expense Title">
+
+        <input type="number" id="expense-amount" placeholder="Amount">
+
+        <input type="date" id="expense-date">
+
+        <select  id="expense-category">
+            <option value="food">food</option>
+            <option value="transport">transport</option>
+            <option value="shoppinig">shopping</option>
+            <option value="other">other</option>
+        </select>
+        <button id="add-expense">Add Expense</button>
+    </div>
+
+    <div class="filter">
+        <label for="filter-date">Filter by Date:</label>
+        <input type="date"  id="filter-date">
+    </div>
+
+
+    <div class="tab"> 
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>category</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table"></tbody>
+        </table>
+    </div>
+
+ 
+
+    <!-- Total Expenses and category -->
+
+    <div id="summary">
+        <h3 id="total-expenses">Total Expenses:</h3>
+        <ul id="category"></ul>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
